@@ -1,0 +1,138 @@
+/*
+- style.css (utf-8)
+- 
+- Edited by: RR-DSE
+- Timestamp: 22-01-27 00:36:06
+*/
+
+* {
+  font-family: "Verdana", "Helvetica", sans-serif;
+  margin: 0pt 0pt 0pt 0pt;
+  padding: 0pt 0pt 0pt 0pt;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+}
+div {
+  box-sizing: border-box;
+}
+body {
+  min-width: 800px;
+  padding: 0pt 0pt 0pt 0pt;
+  counter-reset: h1counter h2counter h3counter h4counter h5counter h6counter;
+}
+.heading {
+  font-weight: bold;
+  margin: 0pt 0pt 8pt 0pt;
+  font-size: 1.0em;
+}
+h1:before {
+  content: counter(h1counter) ".\0000a0";
+  counter-increment: h1counter;
+  counter-reset: h2counter h3counter h4counter h5counter h6counter;
+}
+h2:before {
+  content: counter(h1counter) "." counter(h2counter) ".\0000a0";
+  counter-increment: h2counter;
+  counter-reset: h3counter h4counter h5counter h6counter;
+}
+h3:before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0";
+  counter-increment: h3counter;
+  counter-reset: h4counter h5counter h6counter;
+}
+h4:before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0";
+  counter-increment: h4counter;
+  counter-reset: h5counter h6counter;
+}
+h5:before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0";
+  counter-increment: h5counter;
+  counter-reset: h6counter;
+}
+h6:before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0";
+  counter-increment: h6counter;
+}
+div.group {
+  margin: 0pt 5pt 10pt 0pt;
+  padding: 0pt 0pt 0pt 0pt;
+}
+div.body {
+  margin: 0pt 0pt 0pt 5pt;
+  padding: 0pt 0pt 0pt 5pt;
+  border-style: none none none solid; 
+  border-color: #80e5ff;
+  border-width: 0px 0px 0px 3px;
+}
+div.entry {
+  margin: 0pt 0pt 6pt 0pt;
+}
+
+p.groupheading {
+  font-style: normal;
+  font-weight: bold;
+}
+
+p.listheading {
+  font-style: italic;
+  font-weight: normal;
+}
+
+p.groupfirstline {
+  font-style: normal;
+  font-weight: normal;
+}
+
+div.buttons {
+  display: table-cell;
+  vertical-align: top;
+  width: 70pt;
+  height: auto;
+  font-size = 0;
+}
+div.text {
+  display: table-cell;
+  width: auto;
+  height: auto;
+}
+.button {
+  width: 15pt;
+  height: 15pt;
+  vertical-align: top;
+  align: center;
+  padding: 0pt;
+  font-size: 0.6em;
+  opacity: 0.35;
+}
+.button:hover {
+  opacity: 1;
+}
+.options {
+  max-width: 500px;
+}
+div.main{
+  margin: 5pt 5pt 5pt 5pt;
+}
+div.note{
+  margin: 5pt 5pt 5pt 5pt;
+}
+div.bottom{
+  background-color: #99e6ff;
+  padding: 3pt 5pt 3pt 5pt;
+  font-size = 0;
+}
+.mainbutton {
+  vertical-align: center;
+  align: center;
+  padding: 2pt 5pt 2pt 5pt;
+  margin: 0pt 5pt 0pt 0pt;
+  font-weight: bold;
+  font-size: 1em;
+}
+.notetext {
+  width: 750px;
+  padding: 2pt 2pt 2pt 2pt;
+  height: auto;
+}

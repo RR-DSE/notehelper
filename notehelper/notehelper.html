@@ -1,0 +1,31 @@
+<!--main.html (utf-8)-->
+<!--Edited by: RR-DSE-->
+<!--Timestamp: 22-01-24 18:46:53-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="bottom" class="bottom">
+    <button id="button_getnotetext" class="mainbutton" onclick="onGetNoteText()">Get note text</button><button id="button_editnote" class="mainbutton" onclick="onEditNote()" hidden=true>Edit note</button><button id="button_restart" class="mainbutton" onclick="onRestart()">Restart</button>
+  </div>
+  <div id="main" class="main">
+  </div>
+  <div id="note" class="note" hidden = "true">
+    <form name="noteform">
+      <textarea id="notetext" name="notetext" class="notetext" rows="10", cols="50"></textarea>
+    </form>
+  </div>
+<script>
+  window.onerror = function myErrorHandler(errorMsg, url, lineNumber){
+    alert("Atention: an error has occurred. Please, check the contents of \"entries.js\".");
+    return false;
+  }
+</script>
+<script src="entries.js" charset="utf-8"></script>
+<script src="script.js" charset="utf-8"></script>
+</body>
+</html>
