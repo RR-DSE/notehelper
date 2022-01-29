@@ -1,7 +1,7 @@
 // script.js (utf-8)
 // 
 // Edited by: RR-DSE
-// Timestamp: 22-01-27 00:40:14
+// Timestamp: 22-01-29 00:06:54
 
 const aListTypes = ["list", "list-ordered", "list-unordered"];
 
@@ -400,9 +400,18 @@ function addEntry(oEntry, oParent){
         bRes = true;
       }
     }
-    if(!bRes){
-      oParent.removeChild(oCurrParent.parentElement);
+  }
+  if('options' in oEntry && oEntry.options != null){
+    for(let oCurrEntry of oEntry.options){
+      if('add' in oCurrEntry && oCurrEntry.add){
+        if(addEntry(oCurrEntry, oCurrParent)){
+          bRes = true;
+        }
+      }
     }
+  }
+  if(!bRes){
+    oParent.removeChild(oCurrParent.parentElement);
   }
   resetListParameters(getFirst(document.body, "div", "main"), null, null);
   return bRes;
